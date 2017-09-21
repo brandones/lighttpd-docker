@@ -1,6 +1,6 @@
 # lighttpd Docker image sans default volumes
 
-This is a fork of [https://github.com/spujadas/lighttpd-docker](https://github.com/spujadas/lighttpd-docker) that makes it possible to use this without volumes. It's possible to do everything listed in the original version, but you can also use it (e.g.) as the base for another Dockerfile:
+This is a fork of [https://github.com/spujadas/lighttpd-docker](https://github.com/spujadas/lighttpd-docker) that makes it possible to use this without volumes. The idea was that this way it should be possible to do everything listed in the original version, but also to use it (e.g.) as the base for another Dockerfile:
 
 ```
 FROM bistenes/lighttpd
@@ -9,6 +9,9 @@ WORKDIR /var/www/localhost/htdocs
 COPY    dist/* ./  # if we have, say, 'dist/index.html'
 ```
 
+But this still isn't working, the files are still disappearing sometime between the image being built and it running.
+
+I'm ditching this and trying something else.
 
 # Upstream README:
 
