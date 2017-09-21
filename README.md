@@ -5,10 +5,10 @@ It's possible to do everything listed in the original version, but you can also
 use it (e.g.) as the base for another Dockerfile:
 
 ```
-FROM bistenes/lighttpd
+FROM bistenes/lighttpd-docker
 
 WORKDIR /var/www/localhost/htdocs
-COPY    dist/* .  # if we have, say, 'dist/index.html'
+COPY    dist/* ./  # if we have, say, 'dist/index.html'
 ```
 
 
