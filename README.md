@@ -3,7 +3,7 @@
 This is a fork of [https://github.com/spujadas/lighttpd-docker](https://github.com/spujadas/lighttpd-docker) that makes it possible to use this without volumes. It's possible to do everything listed in the original version, but you can also use it (e.g.) as the base for another Dockerfile:
 
 ```
-FROM bistenes/lighttpd-docker
+FROM bistenes/lighttpd
 
 WORKDIR /var/www/localhost/htdocs
 COPY    dist/* ./  # if we have, say, 'dist/index.html'
