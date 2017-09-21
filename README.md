@@ -1,4 +1,18 @@
-# lighttpd Docker image
+# lighttpd Docker image sans default volumes
+
+This is a fork of [https://github.com/spujadas/lighttpd-docker](https://github.com/spujadas/lighttpd-docker) that makes it possible to use this without volumes.
+It's possible to do everything listed in the original version, but you can also
+use it (e.g.) as the base for another Dockerfile:
+
+```
+FROM bistenes/lighttpd
+
+WORKDIR /var/www/localhost/htdocs
+COPY    dist/* .  # if we have, say, 'dist/index.html'
+```
+
+
+# Upstream README:
 
 Security, speed, compliance, and flexibility -- all of these describe [lighttpd](http://www.lighttpd.net/)
 
